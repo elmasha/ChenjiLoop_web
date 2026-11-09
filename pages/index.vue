@@ -8,7 +8,9 @@
       </div>
       
       <div class="nav-actions">
-        
+        <!-- Replaced Admin Panel with Legal Links -->
+        <NuxtLink to="/privacy" class="nav-link">Privacy</NuxtLink>
+        <NuxtLink to="/terms" class="nav-link">Terms</NuxtLink>
         <a href="/downloads/chenjiloop.apk" class="nav-btn" download>Download App</a>
       </div>
     </header>
@@ -61,12 +63,18 @@
       <div class="visual-side">
         <div class="phone-frame">
           <div class="phone-screen">
-            <!-- UPDATED: Using the new hosted mockup URL -->
             <img src="https://www.image2url.com/r2/default/images/1794230810770-b52bfec8-03ce-4a1d-a1ab-25e8f71dbc4e.png" alt="ChenjiLoop App Mockup" class="app-screenshot" />
           </div>
         </div>
       </div>
     </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <span>© 2026 ChenjiLoop. All rights reserved.</span>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -188,6 +196,7 @@ p { font-size: 18px; color: #767676; line-height: 1.6; margin: 0 0 40px 0; max-w
   border-bottom-left-radius: 40px;
 }
 
+/* --- THE PHONE FRAME --- */
 .phone-frame {
   width: 320px;
   height: 660px;
@@ -220,13 +229,30 @@ p { font-size: 18px; color: #767676; line-height: 1.6; margin: 0 0 40px 0; max-w
   display: block;
 }
 
+/* --- FOOTER --- */
+.site-footer {
+  padding: 24px 48px;
+  border-top: 1px solid #E5E7EB;
+  background: #FFFFFF;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #767676;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 900px) {
   .top-bar {
     padding: 16px 24px;
   }
   .nav-link {
-    display: none;
+    display: none; /* Hide links on mobile to save space */
   }
   .landing-page {
     flex-direction: column;
@@ -243,5 +269,6 @@ p { font-size: 18px; color: #767676; line-height: 1.6; margin: 0 0 40px 0; max-w
   .features-list { align-items: flex-start; }
   .visual-side { border-radius: 0; padding: 60px 24px; }
   .phone-frame { transform: none; }
+  .footer-content { justify-content: center; }
 }
 </style>
