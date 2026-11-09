@@ -3,7 +3,7 @@ export default {
 
   head: {
     titleTemplate: '%s ',
-    title: 'ChenjiLoop Admin',
+    title: 'ChenjiLoop',
     htmlAttrs: { lang: 'en' },
     meta: [
       { charset: 'utf-8' },
