@@ -8,7 +8,6 @@
       </div>
       
       <div class="nav-actions">
-        <!-- Replaced Admin Panel with Legal Links -->
         <NuxtLink to="/privacy" class="nav-link">Privacy</NuxtLink>
         <NuxtLink to="/terms" class="nav-link">Terms</NuxtLink>
         <a href="/downloads/chenjiloop.apk" class="nav-btn" download>Download App</a>
@@ -69,10 +68,15 @@
       </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Updated Footer with Links -->
     <footer class="site-footer">
       <div class="footer-content">
         <span>© 2026 ChenjiLoop. All rights reserved.</span>
+        <div class="footer-links">
+          <NuxtLink to="/privacy" class="footer-link">Privacy Policy</NuxtLink>
+          <NuxtLink to="/terms" class="footer-link">Terms of Service</NuxtLink>
+          <NuxtLink to="/delete-account" class="footer-link">Delete Account</NuxtLink>
+        </div>
       </div>
     </footer>
   </div>
@@ -246,13 +250,29 @@ p { font-size: 18px; color: #767676; line-height: 1.6; margin: 0 0 40px 0; max-w
   color: #767676;
 }
 
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-link {
+  color: #767676;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #0EA5E9;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 900px) {
   .top-bar {
     padding: 16px 24px;
   }
   .nav-link {
-    display: none; /* Hide links on mobile to save space */
+    display: none;
   }
   .landing-page {
     flex-direction: column;
@@ -269,6 +289,17 @@ p { font-size: 18px; color: #767676; line-height: 1.6; margin: 0 0 40px 0; max-w
   .features-list { align-items: flex-start; }
   .visual-side { border-radius: 0; padding: 60px 24px; }
   .phone-frame { transform: none; }
-  .footer-content { justify-content: center; }
+  
+  /* Footer adjustments for mobile */
+  .footer-content { 
+    flex-direction: column; 
+    gap: 16px; 
+    text-align: center; 
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
 }
 </style>
